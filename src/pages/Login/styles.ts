@@ -1,6 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+export const slideInFromRight = keyframes`
+  0% {
+    transform: translateX(250%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+`;
 
 export const Wrapper = styled.div`
+  overflow: hidden;
   display: flex;
   height: 100vh;
   width: 100%;
@@ -37,6 +47,7 @@ export const GradientWrapper = styled.div`
 `;
 
 export const ContentDiv = styled.div`
+  animation: ${slideInFromRight} 0.9s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,7 +83,7 @@ export const StartDiv = styled.div`
 
   button {
     position: absolute;
-    bottom: 10px; /* Ajuste a distância da parte inferior conforme necessário */
+    bottom: 10px;
     width: 38px;
     height: 38px;
     padding: 8px;
@@ -84,11 +95,11 @@ export const StartDiv = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.2s all; /* Adicionando transição para todas as propriedades */
+    transition: 0.2s all;
 
     &:hover {
       cursor: pointer;
-      bottom: 0; /* Ajuste conforme necessário para centralizar */
+      bottom: 0;
       width: 48px;
       height: 48px;
       background-color: #ffffff2b;
