@@ -1,8 +1,10 @@
+import { GradientWrapper, Wrapper } from './styles';
+
 const LoginPage: React.FC = () => {
   return (
-    <div>
-      <h2>Login Page</h2>
-    </div>
+    <Wrapper>
+      <GradientWrapper></GradientWrapper>
+    </Wrapper>
   );
 };
 
