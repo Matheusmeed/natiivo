@@ -18,7 +18,6 @@ export const ContentDiv = styled.div`
 
   img {
     width: 484px;
-    height: 262.96px;
   }
 `;
 
