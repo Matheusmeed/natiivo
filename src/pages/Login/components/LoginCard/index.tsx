@@ -1,5 +1,7 @@
+import { Card } from './styles';
+
 const LoginCard = () => {
-  return <LoginCard></LoginCard>;
+  return <Card>oi</Card>;
 };
 
 export default LoginCard;
