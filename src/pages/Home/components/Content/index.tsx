@@ -68,7 +68,7 @@ const Content: React.FC<{
           <img src='/images/util/natiivoText.png' alt='natiivo' />
         </LogoDiv>
       </HeaderDiv>
-      <BodyDiv>{showProperties ? <Properties /> : <InitialContent />}</BodyDiv>
+      <BodyDiv>{!showProperties ? <Properties /> : <InitialContent />}</BodyDiv>
     </Wrapper>
   );
 };
