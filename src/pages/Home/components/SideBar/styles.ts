@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   position: relative;
-  width: 96px;
+  width: 72px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,5 +85,25 @@ export const BottomOptions = styled.div`
         display: flex;
       }
     }
+  }
+`;
+
+export const InteractiveButton = styled.button`
+  position: absolute;
+  right: -21px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 200px;
+  width: 40px;
+  height: 40px;
+  background: #403b36;
+  box-shadow: 1px 1px 5px 1px #ffffff52 inset;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 1px 2px 5px 2px #ffffff96 inset;
+    transition: 0.3s;
   }
 `;

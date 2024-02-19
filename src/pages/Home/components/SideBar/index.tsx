@@ -1,6 +1,11 @@
 import SquareDots from './components/SquareDots';
-import { BottomOptions, SelectionDiv, Wrapper } from './styles';
-import { FaPowerOff } from 'react-icons/fa6';
+import {
+  BottomOptions,
+  InteractiveButton,
+  SelectionDiv,
+  Wrapper,
+} from './styles';
+import { FaPowerOff, FaPlus } from 'react-icons/fa6';
 import { IoMdHelpCircle } from 'react-icons/io';
 
 const SideBar: React.FC = () => {
@@ -45,6 +50,9 @@ const SideBar: React.FC = () => {
           <p>LOGOUT</p>
         </button>
       </BottomOptions>
+      <InteractiveButton>
+        <FaPlus color='#FFFFFF' size={20} />
+      </InteractiveButton>
     </Wrapper>
   );
 };
