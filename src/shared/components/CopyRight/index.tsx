@@ -1,8 +1,10 @@
 import { CopyRightText } from './styles';
 
-const CopyRight = () => {
+const CopyRight = ({ isAtRight }: { isAtRight?: boolean }) => {
   return (
-    <CopyRightText>© 2023 Natiivo Miami. All rights reserved.</CopyRightText>
+    <CopyRightText isAtRight={isAtRight}>
+      © 2023 Natiivo Miami. All rights reserved.
+    </CopyRightText>
   );
 };
 

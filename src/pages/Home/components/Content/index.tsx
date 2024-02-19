@@ -9,6 +9,7 @@ import {
   Wrapper,
 } from './styles';
 import StartExperience from '../../../../shared/components/StartExperience';
+import CopyRight from '../../../../shared/components/CopyRight';
 
 type OptionsType = 'HOME' | 'PROJECT' | 'SALES';
 const Content: React.FC = () => {
@@ -61,6 +62,7 @@ const Content: React.FC = () => {
           </p>
           <StartExperience isAtHome />
         </TitleDiv>
+        <CopyRight isAtRight />
       </BodyDiv>
     </Wrapper>
   );

@@ -9,6 +9,7 @@ import {
 } from './styles';
 import { FaPowerOff, FaPlus } from 'react-icons/fa6';
 import { IoMdHelpCircle } from 'react-icons/io';
+import { useNavigate } from 'react-router-dom';
 
 type OptionsType =
   | '360'
@@ -18,6 +19,7 @@ type OptionsType =
   | 'gallery'
   | 'location';
 const SideBar: React.FC = () => {
+  const navigate = useNavigate();
   const [selectedOption, setSelectedOption] = useState<OptionsType>('360');
 
   const changeSelectedOption = (newOption: OptionsType) => {
@@ -90,7 +92,11 @@ const SideBar: React.FC = () => {
           <IoMdHelpCircle color='#9C9C9C' size={20} />
           <p>HELP</p>
         </button>
-        <button>
+        <button
+          onClick={() => {
+            navigate('/login');
+          }}
+        >
           <FaPowerOff color='#9C9C9C' size={18} />
           <p>LOGOUT</p>
         </button>
