@@ -28,7 +28,9 @@ export const SelectionButton = styled.button<{ isSelected: boolean }>`
   backdrop-filter: ${({ isSelected }) => (isSelected ? 'blur(5px)' : 'unset')};
   background: ${({ isSelected }) => (isSelected ? '#ffffff0f' : 'none')};
   box-shadow: ${({ isSelected }) =>
-    isSelected ? '1px 1px 5px 1px #ffffff52 inset' : 'none'};
+    isSelected
+      ? '1px 1px 5px 1px #ffffff52 inset, 0px 4px 4px 0px #00000040'
+      : 'none'};
   border: none;
   cursor: pointer;
   border-radius: 30px;
@@ -45,7 +47,7 @@ export const SelectionButton = styled.button<{ isSelected: boolean }>`
 
   &:hover {
     background: #ffffff0f;
-    box-shadow: 1px 1px 5px 1px #ffffff52 inset;
+    box-shadow: 1px 1px 5px 1px #ffffff52 inset, 0px 4px 4px 0px #00000040;
     backdrop-filter: blur(5px);
     transition: 0.3s;
   }
@@ -102,11 +104,11 @@ export const InteractiveButton = styled.button`
   width: 40px;
   height: 40px;
   background: #403b36;
-  box-shadow: 1px 1px 5px 1px #ffffff52 inset;
+  box-shadow: 1px 1px 5px 1px #ffffff52 inset, 0px 4px 4px 0px #00000040;
   cursor: pointer;
 
   &:hover {
-    box-shadow: 1px 2px 5px 2px #ffffff96 inset;
+    box-shadow: 1px 2px 5px 2px #ffffff96 inset, 0px 4px 4px 0px #00000040;
     transition: 0.3s;
   }
 `;

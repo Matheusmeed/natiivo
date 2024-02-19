@@ -6,7 +6,7 @@ export const Card = styled.div`
   max-height: 700px;
   padding: 48px;
   border-radius: 16px;
-  box-shadow: 1px 1px 5px 1px #ffffff52 inset;
+  box-shadow: 1px 1px 5px 1px #ffffff52 inset, 0px 4px 4px 0px #00000040;
   background: #000000a3;
   display: flex;
   gap: 54px;
@@ -135,7 +135,7 @@ export const GuestDiv = styled.div`
     gap: 8px;
     background: #ffffff14;
     border: none;
-    box-shadow: 1px 1px 5px 1px #ffffff52 inset;
+    box-shadow: 1px 1px 5px 1px #ffffff52 inset, 0px 4px 4px 0px #00000040;
     color: #f6f6f6;
     font-size: 14px;
     font-weight: 400;
@@ -174,7 +174,7 @@ export const BrokerDiv = styled.div`
     border-radius: 600px;
     background: #ffffff0f;
     border: none;
-    box-shadow: 1px 1px 5px 1px #ffffff52 inset;
+    box-shadow: 1px 1px 5px 1px #ffffff52 inset, 0px 4px 4px 0px #00000040;
     outline: none;
     color: #f6f6f6;
 
@@ -227,7 +227,7 @@ export const SubmitLoginDiv = styled.div`
     gap: 8px;
     background: #ffffff;
     border: none;
-    box-shadow: 1px 1px 5px 1px #ffffff52 inset;
+    box-shadow: 1px 1px 5px 1px #ffffff52 inset, 0px 4px 4px 0px #00000040;
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
