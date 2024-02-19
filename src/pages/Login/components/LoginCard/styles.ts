@@ -2,20 +2,20 @@ import styled from 'styled-components';
 
 export const Card = styled.div`
   width: fit-content;
-  height: 600px;
+  height: 86%;
+  max-height: 700px;
   padding: 48px;
   border-radius: 16px;
-  gap: 48px;
   box-shadow: 1px 1px 5px 1px #ffffff52 inset;
   background: #000000a3;
   display: flex;
-  gap: 30px;
+  gap: 54px;
   backdrop-filter: blur(5px);
 `;
 
 export const LeftSide = styled.div`
-  width: 400px;
-  height: 500px;
+  width: 470px;
+  height: 100%;
   overflow: hidden;
   border-radius: 8px;
   position: relative;
@@ -63,7 +63,11 @@ export const RightSide = styled.div`
   display: flex;
   flex-direction: column;
   color: white;
-  gap: 48px;
+  gap: 6%;
+
+  @media (max-height: 752px) {
+    gap: 4%;
+  }
 `;
 
 export const TitleDiv = styled.div`
@@ -74,6 +78,8 @@ export const TitleDiv = styled.div`
     letter-spacing: 0.03em;
     text-align: left;
     color: #ffffff;
+    margin-bottom: 10px;
+    margin-top: 3px;
   }
 
   p {
@@ -83,6 +89,7 @@ export const TitleDiv = styled.div`
     letter-spacing: 0em;
     text-align: left;
     opacity: 0.7;
+    max-width: 350px;
   }
 `;
 
@@ -98,6 +105,10 @@ export const GuestDiv = styled.div`
       rgba(255, 255, 255, 0) 106.54%
     )
     1;
+
+  @media (max-height: 683px) {
+    gap: 10px;
+  }
 
   h3 {
     width: fit-content;
@@ -124,7 +135,6 @@ export const GuestDiv = styled.div`
     gap: 8px;
     background: #ffffff14;
     border: none;
-    box-shadow: 0px 4px 4px 0px #00000040;
     box-shadow: 1px 1px 5px 1px #ffffff52 inset;
     color: #f6f6f6;
     font-size: 14px;
@@ -132,17 +142,19 @@ export const GuestDiv = styled.div`
     line-height: 17px;
     letter-spacing: 0.04em;
     text-align: center;
+    cursor: pointer;
   }
 `;
 
 export const BrokerDiv = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 
   h3 {
     width: fit-content;
     padding-bottom: 4px;
+    margin-bottom: 12px;
     font-size: 14px;
     font-weight: 400;
     line-height: 19px;
@@ -191,6 +203,65 @@ export const PasswordDiv = styled.div`
     transform: translateY(50%);
     background: none;
     border: none;
+    cursor: pointer;
+  }
+`;
+
+export const LoginDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+`;
+
+export const SubmitLoginDiv = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    margin-top: 10%;
+    padding: 16px;
+    border-radius: 1000px;
+    gap: 8px;
+    background: #ffffff;
+    border: none;
+    box-shadow: 1px 1px 5px 1px #ffffff52 inset;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.04em;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    @media (max-height: 782px) {
+      margin-top: 5%;
+    }
+
+    @media (max-height: 722px) {
+      margin-top: 2%;
+    }
+  }
+`;
+
+export const NoAccountDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+
+  :last-child {
+    color: #ffe08f;
     cursor: pointer;
   }
 `;

@@ -6,12 +6,16 @@ import {
   GuestDiv,
   Image,
   LeftSide,
+  LoginDiv,
   LogoDiv,
+  NoAccountDiv,
   PasswordDiv,
   RightSide,
+  SubmitLoginDiv,
   TitleDiv,
 } from './styles';
 import { FaRegEyeSlash, FaRegEye } from 'react-icons/fa6';
+import { HiArrowNarrowRight } from 'react-icons/hi';
 
 const LoginCard = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -57,8 +61,17 @@ const LoginCard = () => {
               )}
             </button>
           </PasswordDiv>
-          <button>LOGIN -</button>
-          <p>Don’t have an account? Create new account</p>
+          <LoginDiv>
+            <SubmitLoginDiv>
+              <button>
+                LOGIN <HiArrowNarrowRight color='#000000' />
+              </button>
+            </SubmitLoginDiv>
+            <NoAccountDiv>
+              <p>Don’t have an account?</p>
+              <p>Create new account</p>
+            </NoAccountDiv>
+          </LoginDiv>
         </BrokerDiv>
       </RightSide>
     </Card>
