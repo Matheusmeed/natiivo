@@ -16,8 +16,10 @@ import {
 } from './styles';
 import { FaRegEyeSlash, FaRegEye } from 'react-icons/fa6';
 import { HiArrowNarrowRight } from 'react-icons/hi';
+import { useNavigate } from 'react-router-dom';
 
 const LoginCard = () => {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -63,7 +65,11 @@ const LoginCard = () => {
           </PasswordDiv>
           <LoginDiv>
             <SubmitLoginDiv>
-              <button>
+              <button
+                onClick={() => {
+                  navigate('/home');
+                }}
+              >
                 LOGIN <HiArrowNarrowRight color='#000000' />
               </button>
             </SubmitLoginDiv>
