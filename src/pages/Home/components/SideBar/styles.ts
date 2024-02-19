@@ -60,7 +60,7 @@ export const BottomOptions = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
 
   button {
     position: relative;

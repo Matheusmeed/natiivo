@@ -13,9 +13,11 @@ import { FaPlus, FaMinus } from 'react-icons/fa6';
 import Properties from './components/Properties';
 
 type OptionsType = 'HOME' | 'PROJECT' | 'SALES';
-const Content: React.FC = () => {
+const Content: React.FC<{
+  setShowProperties: React.Dispatch<React.SetStateAction<boolean>>;
+  showProperties: boolean;
+}> = ({ showProperties, setShowProperties }) => {
   const [selectedOption, setSelectedOption] = useState<OptionsType>('HOME');
-  const [showProperties, setShowProperties] = useState(false);
 
   const changeSelectedOption = (newOption: OptionsType) => {
     setSelectedOption(newOption);
