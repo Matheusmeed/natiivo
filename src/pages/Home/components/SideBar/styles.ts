@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  position: relative;
   width: 68px;
   display: flex;
   flex-direction: column;
@@ -35,6 +36,46 @@ export const SelectionDiv = styled.div`
       box-shadow: 1px 1px 5px 1px #ffffff52 inset;
       backdrop-filter: blur(5px);
       transition: 0.3s;
+    }
+  }
+`;
+
+export const BottomOptions = styled.div`
+  position: absolute;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #9c9c9c;
+
+    p {
+      display: none;
+      position: absolute;
+      left: 32px;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+
+    &:hover {
+      * {
+        color: white;
+        transition: 0.3s;
+      }
+
+      p {
+        display: flex;
+      }
     }
   }
 `;

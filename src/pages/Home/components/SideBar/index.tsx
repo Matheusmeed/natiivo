@@ -1,5 +1,7 @@
 import SquareDots from './components/SquareDots';
-import { SelectionDiv, Wrapper } from './styles';
+import { BottomOptions, SelectionDiv, Wrapper } from './styles';
+import { FaPowerOff } from 'react-icons/fa6';
+import { IoMdHelpCircle } from 'react-icons/io';
 
 const SideBar: React.FC = () => {
   return (
@@ -33,6 +35,16 @@ const SideBar: React.FC = () => {
           <img src='/images/icon/video.png' alt='360' />
         </button>
       </SelectionDiv>
+      <BottomOptions>
+        <button>
+          <IoMdHelpCircle color='#9C9C9C' size={20} />
+          <p>HELP</p>
+        </button>
+        <button>
+          <FaPowerOff color='#9C9C9C' size={18} />
+          <p>LOGOUT</p>
+        </button>
+      </BottomOptions>
     </Wrapper>
   );
 };
