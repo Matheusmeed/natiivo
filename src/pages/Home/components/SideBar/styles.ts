@@ -22,29 +22,32 @@ export const SelectionDiv = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+`;
 
-  button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    border-radius: 30px;
-    width: 27px;
-    height: 27px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+export const SelectionButton = styled.button<{ isSelected: boolean }>`
+  backdrop-filter: ${({ isSelected }) => (isSelected ? 'blur(5px)' : 'unset')};
+  background: ${({ isSelected }) => (isSelected ? '#ffffff0f' : 'none')};
+  box-shadow: ${({ isSelected }) =>
+    isSelected ? '1px 1px 5px 1px #ffffff52 inset' : 'none'};
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  width: 27px;
+  height: 27px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    img {
-      width: 17px;
-    }
+  img {
+    width: 17px;
+  }
 
-    &:hover {
-      background: #ffffff0f;
-      box-shadow: 1px 1px 5px 1px #ffffff52 inset;
-      backdrop-filter: blur(5px);
-      transition: 0.3s;
-    }
+  &:hover {
+    background: #ffffff0f;
+    box-shadow: 1px 1px 5px 1px #ffffff52 inset;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
   }
 `;
 

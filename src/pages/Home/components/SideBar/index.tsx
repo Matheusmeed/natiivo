@@ -1,44 +1,89 @@
+import { useState } from 'react';
 import SquareDots from './components/SquareDots';
 import {
   BottomOptions,
   InteractiveButton,
+  SelectionButton,
   SelectionDiv,
   Wrapper,
 } from './styles';
 import { FaPowerOff, FaPlus } from 'react-icons/fa6';
 import { IoMdHelpCircle } from 'react-icons/io';
 
+type OptionsType =
+  | '360'
+  | 'return'
+  | 'chart'
+  | 'video'
+  | 'gallery'
+  | 'location';
 const SideBar: React.FC = () => {
+  const [selectedOption, setSelectedOption] = useState<OptionsType>('360');
+
+  const changeSelectedOption = (newOption: OptionsType) => {
+    setSelectedOption(newOption);
+  };
+
   return (
     <Wrapper>
       <SelectionDiv>
-        <button>
+        <SelectionButton
+          isSelected={selectedOption === '360'}
+          onClick={() => {
+            changeSelectedOption('360');
+          }}
+        >
           <img src='/images/icon/360.png' alt='360' />
-        </button>
+        </SelectionButton>
         <SquareDots />
-        <button>
-          <img src='/images/icon/return.png' alt='360' />
-        </button>
+        <SelectionButton
+          isSelected={selectedOption === 'return'}
+          onClick={() => {
+            changeSelectedOption('return');
+          }}
+        >
+          <img src='/images/icon/return.png' alt='return' />
+        </SelectionButton>
         <SquareDots />
-        <button>
+        <SelectionButton
+          isSelected={selectedOption === 'chart'}
+          onClick={() => {
+            changeSelectedOption('chart');
+          }}
+        >
           <img
             src='/images/icon/chart.png'
-            alt='360'
+            alt='chart'
             style={{ marginRight: 1 }}
           />
-        </button>
+        </SelectionButton>
         <SquareDots />
-        <button>
-          <img src='/images/icon/location.png' alt='360' />
-        </button>
+        <SelectionButton
+          isSelected={selectedOption === 'location'}
+          onClick={() => {
+            changeSelectedOption('location');
+          }}
+        >
+          <img src='/images/icon/location.png' alt='location' />
+        </SelectionButton>
         <SquareDots />
-        <button>
-          <img src='/images/icon/gallery.png' alt='360' />
-        </button>
+        <SelectionButton
+          isSelected={selectedOption === 'gallery'}
+          onClick={() => {
+            changeSelectedOption('gallery');
+          }}
+        >
+          <img src='/images/icon/gallery.png' alt='gallery' />
+        </SelectionButton>
         <SquareDots />
-        <button>
-          <img src='/images/icon/video.png' alt='360' />
-        </button>
+        <SelectionButton
+          isSelected={selectedOption === 'video'}
+          onClick={() => {
+            changeSelectedOption('video');
+          }}
+        >
+          <img src='/images/icon/video.png' alt='video' />
+        </SelectionButton>
       </SelectionDiv>
       <BottomOptions>
         <button>
