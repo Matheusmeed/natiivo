@@ -2,11 +2,19 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   position: relative;
-  width: 68px;
+  width: 96px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-right: 2px solid;
+  border-image: linear-gradient(
+      360deg,
+      rgba(255, 255, 255, 0) 12.9%,
+      rgba(255, 255, 255, 0.32) 37.77%,
+      rgba(255, 255, 255, 0) 106.54%
+    )
+    1;
 `;
 
 export const SelectionDiv = styled.div`
