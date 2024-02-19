@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  width: 140px;
+  width: 68px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +31,9 @@ export const SelectionDiv = styled.div`
     }
 
     &:hover {
-      background-color: #00000038;
+      background: #ffffff0f;
+      box-shadow: 1px 1px 5px 1px #ffffff52 inset;
+      backdrop-filter: blur(5px);
       transition: 0.3s;
     }
   }
