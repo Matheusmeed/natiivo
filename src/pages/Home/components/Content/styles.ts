@@ -7,6 +7,29 @@ export const Wrapper = styled.div`
   flex-direction: column;
 `;
 
+export const InteractiveButton = styled.button`
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 67.5px;
+  transform: translate(-50%, -50%);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 200px;
+  width: 40px;
+  height: 40px;
+  background: #403b36;
+  box-shadow: 1px 1px 5px 1px #ffffff52 inset, 0px 4px 4px 0px #00000040;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 1px 2px 5px 2px #ffffff96 inset, 0px 4px 4px 0px #00000040;
+    transition: 0.3s;
+  }
+`;
+
 export const HeaderDiv = styled.div`
   margin: 20px 30px;
   height: 60px;
@@ -61,6 +84,7 @@ export const LogoDiv = styled.div`
 `;
 
 export const BodyDiv = styled.div`
+  position: relative;
   height: 100%;
   width: 100%;
 `;

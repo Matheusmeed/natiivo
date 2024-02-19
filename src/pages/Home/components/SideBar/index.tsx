@@ -2,7 +2,6 @@ import { useState } from 'react';
 import SquareDots from './components/SquareDots';
 import {
   BottomOptions,
-  InteractiveButton,
   SelectionButton,
   SelectionDiv,
   Wrapper,
@@ -101,9 +100,6 @@ const SideBar: React.FC = () => {
           <p>LOGOUT</p>
         </button>
       </BottomOptions>
-      <InteractiveButton>
-        <FaPlus color='#FFFFFF' size={20} />
-      </InteractiveButton>
     </Wrapper>
   );
 };

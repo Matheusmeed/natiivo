@@ -2,16 +2,20 @@ import { useState } from 'react';
 import {
   BodyDiv,
   HeaderDiv,
+  InteractiveButton,
   LogoDiv,
   NavigationDiv,
   NavigationOption,
   Wrapper,
 } from './styles';
 import InitialContent from './components/InitalContent';
+import { FaPlus, FaMinus } from 'react-icons/fa6';
+import Properties from './components/Properties';
 
 type OptionsType = 'HOME' | 'PROJECT' | 'SALES';
 const Content: React.FC = () => {
   const [selectedOption, setSelectedOption] = useState<OptionsType>('HOME');
+  const [showProperties, setShowProperties] = useState(false);
 
   const changeSelectedOption = (newOption: OptionsType) => {
     setSelectedOption(newOption);
@@ -19,6 +23,17 @@ const Content: React.FC = () => {
 
   return (
     <Wrapper>
+      <InteractiveButton
+        onClick={() => {
+          setShowProperties((prevState) => !prevState);
+        }}
+      >
+        {showProperties ? (
+          <FaMinus color='#FFFFFF' size={20} />
+        ) : (
+          <FaPlus color='#FFFFFF' size={20} />
+        )}
+      </InteractiveButton>
       <HeaderDiv>
         <NavigationDiv>
           <NavigationOption
@@ -51,9 +66,7 @@ const Content: React.FC = () => {
           <img src='/images/util/natiivoText.png' alt='natiivo' />
         </LogoDiv>
       </HeaderDiv>
-      <BodyDiv>
-        <InitialContent />
-      </BodyDiv>
+      <BodyDiv>{showProperties ? <Properties /> : <InitialContent />}</BodyDiv>
     </Wrapper>
   );
 };
