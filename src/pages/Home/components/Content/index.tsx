@@ -5,11 +5,9 @@ import {
   LogoDiv,
   NavigationDiv,
   NavigationOption,
-  TitleDiv,
   Wrapper,
 } from './styles';
-import StartExperience from '../../../../shared/components/StartExperience';
-import CopyRight from '../../../../shared/components/CopyRight';
+import InitialContent from './components/InitalContent';
 
 type OptionsType = 'HOME' | 'PROJECT' | 'SALES';
 const Content: React.FC = () => {
@@ -54,15 +52,7 @@ const Content: React.FC = () => {
         </LogoDiv>
       </HeaderDiv>
       <BodyDiv>
-        <TitleDiv>
-          <h1>INNOVATION IN YOUR HANDS</h1>
-          <p>
-            Explore, Interact and Transform the Real Estate Market with Our
-            Smart Interactive Table.
-          </p>
-          <StartExperience isAtHome />
-        </TitleDiv>
-        <CopyRight isAtRight />
+        <InitialContent />
       </BodyDiv>
     </Wrapper>
   );
