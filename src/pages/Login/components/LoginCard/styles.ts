@@ -221,7 +221,7 @@ export const SubmitLoginDiv = styled.div`
   flex-direction: column;
 
   button {
-    margin-top: 10%;
+    margin-top: 9%;
     padding: 16px;
     border-radius: 1000px;
     gap: 8px;
