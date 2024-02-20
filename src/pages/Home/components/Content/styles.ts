@@ -11,7 +11,7 @@ export const InteractiveButton = styled.button`
   z-index: 2;
   position: absolute;
   top: 50%;
-  left: 67.5px;
+  left: 89.6px;
   transform: translate(-50%, -50%);
   border: none;
   display: flex;

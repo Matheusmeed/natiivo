@@ -47,29 +47,37 @@ const Properties: React.FC<{
         </TitleDiv>
         <CardDiv>
           <Cards>
-            {properties.map((property) => (
-              <Card
-                isSelected={property.id === selectedContent.id}
-                key={property.id}
-                onClick={() => {
-                  setSelectedContent(property);
-                }}
-              >
-                <img src={property.cardBackground} alt='360' />
-                <Overlay />
-                <CardBottom>
-                  <BottomTitleDiv>
-                    <div>
-                      <img src={property.icon} alt='360' />
-                    </div>
-                    <p>{property.cardTitle}</p>
-                  </BottomTitleDiv>
-                  <CustomButton>
-                    <BsPlusLg color='#FFFFFF' size={26} />
-                  </CustomButton>
-                </CardBottom>
-              </Card>
-            ))}
+            {properties.map((property) => {
+              if (
+                property.id < selectedContent.id &&
+                property.id < properties.length - 1
+              )
+                return <></>;
+              return (
+                <Card
+                  isSelected={property.id === selectedContent.id}
+                  key={property.id}
+                >
+                  <img src={property.cardBackground} alt='360' />
+                  <Overlay />
+                  <CardBottom>
+                    <BottomTitleDiv>
+                      <div>
+                        <img src={property.icon} alt='360' />
+                      </div>
+                      <p>{property.cardTitle}</p>
+                    </BottomTitleDiv>
+                    <CustomButton
+                      onClick={() => {
+                        setSelectedContent(property);
+                      }}
+                    >
+                      <BsPlusLg color='#FFFFFF' size={26} />
+                    </CustomButton>
+                  </CardBottom>
+                </Card>
+              );
+            })}
           </Cards>
           <SelectionButtons>
             <CustomButton
@@ -91,8 +99,6 @@ const Properties: React.FC<{
             <CustomButton
               isDisabled={isButtonDisabled('right')}
               onClick={() => {
-                console.log('oi');
-
                 if (!isButtonDisabled('right')) {
                   setSelectedContent((prevContent) => {
                     const newContent = properties.find(

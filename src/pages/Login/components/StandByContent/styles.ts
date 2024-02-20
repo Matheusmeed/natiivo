@@ -1,13 +1,5 @@
-import styled, { keyframes } from 'styled-components';
-
-const slideInFromRight = keyframes`
-  0% {
-    transform: translateX(250%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-`;
+import styled from 'styled-components';
+import { slideInFromRight } from '../../../../shared/animation/animations';
 
 export const ContentDiv = styled.div`
   animation: ${slideInFromRight} 0.9s ease-in-out;

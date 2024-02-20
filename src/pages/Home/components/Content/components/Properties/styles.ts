@@ -15,7 +15,7 @@ export const TitleDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 900px;
+  width: 860px;
 
   h1 {
     font-size: 48px;
