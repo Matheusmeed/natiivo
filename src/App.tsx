@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AppRouter from './routes/AppRouter';
+import ImagePreloader from './shared/util/imagePreloader';
+import { usedImagesPath } from './shared/util/usedImagesPath';
+import VideoPreloader from './shared/util/videoPreLoader';
 
 const App: React.FC = () => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+  const handleVideoLoaded = () => {
+    setIsVideoLoaded(true);
+  };
+
   return (
     <div>
-      <AppRouter />
+      {!isVideoLoaded && <div style={{ color: 'white' }}>Carregando...</div>}
+      {isVideoLoaded && (
+        <>
+          <AppRouter />
+        </>
+      )}
+      <VideoPreloader
+        videoSource={'/videos/video_background.mp4'}
+        onLoaded={handleVideoLoaded}
+      />
+      <ImagePreloader imageSources={usedImagesPath} />
     </div>
   );
 };
