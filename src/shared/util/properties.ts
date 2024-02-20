@@ -10,8 +10,8 @@ export const properties = [
   },
   {
     icon: '/images/icon/tour.png',
-    cardBackground: '/images/cardBackground/tour_card.jpg',
-    background: '/images/background/tour_wallpaper.jpg',
+    cardBackground: '/images/cardBackground/tour_card.png',
+    background: '/images/background/tour_wallpaper.png',
     title: 'TOUR VIRTUAL',
     cardTitle: 'TOUR VIRTUAL',
     description: 'Take a tour of our building',
@@ -28,8 +28,8 @@ export const properties = [
   },
   {
     icon: '/images/icon/surroundings.png',
-    cardBackground: '/images/cardBackground/surroundings_card.jpg',
-    background: '/images/background/surroundings_wallpaper.jpg',
+    cardBackground: '/images/cardBackground/surroundings_card.png',
+    background: '/images/background/surroundings_wallpaper.png',
     title: 'SURROUNDINGS',
     cardTitle: 'SURROUNDINGS',
     description: 'See what’s around',
@@ -37,7 +37,7 @@ export const properties = [
   },
   {
     icon: '/images/icon/gallery.png',
-    cardBackground: '/images/cardBackground/gallery_card.jpg',
+    cardBackground: '/images/cardBackground/gallery_card.png',
     background: '/images/background/gallery_wallpaper.jpg',
     title: 'GALLERY',
     cardTitle: 'GALLERY',
@@ -46,8 +46,8 @@ export const properties = [
   },
   {
     icon: '/images/icon/video.png',
-    cardBackground: '/images/cardBackground/watch_card.jpg',
-    background: '/images/background/watch_wallpaper.jpg',
+    cardBackground: '/images/cardBackground/watch_card.png',
+    background: '/images/background/watch_wallpaper.png',
     title: 'WATCH',
     cardTitle: 'VIDEO',
     description: 'Complete videos of the project',

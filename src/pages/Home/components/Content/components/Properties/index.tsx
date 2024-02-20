@@ -15,71 +15,103 @@ import {
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
 import { properties } from '../../../../../../shared/util/properties';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const Properties: React.FC<{
   changeBackground: (newBackground: string) => void;
 }> = ({ changeBackground }) => {
+  const [selectedContent, setSelectedContent] = useState(properties[0]);
+
   useEffect(() => {
-    changeBackground(properties[0].background);
-  }, [changeBackground]);
+    changeBackground(selectedContent.background);
+  }, [changeBackground, selectedContent.background]);
+
+  const isButtonDisabled = (direction: 'left' | 'right') => {
+    if (
+      (selectedContent.id === 1 && direction === 'left') ||
+      (selectedContent.id === properties.length && direction === 'right')
+    ) {
+      return true;
+    }
+  };
 
   return (
     <>
       <Wrapper>
         <TitleDiv>
-          <h1>{properties[0].title}</h1>
-          <p>{properties[0].description}</p>
+          <h1>{selectedContent.title}</h1>
+          <p>{selectedContent.description}</p>
           <button>
             <p>LET ME IN</p> <HiArrowNarrowRight style={{ marginBottom: 2 }} />
           </button>
         </TitleDiv>
         <CardDiv>
           <Cards>
-            <Card isSelected>
-              <img src={properties[0].cardBackground} alt='360' />
-              <Overlay />
-              <CardBottom>
-                <BottomTitleDiv>
-                  <div>
-                    <img src={properties[0].icon} alt='360' />
-                  </div>
-                  <p>{properties[0].cardTitle}</p>
-                </BottomTitleDiv>
-                <CustomButton>
-                  <BsPlusLg color='#FFFFFF' size={26} />
-                </CustomButton>
-              </CardBottom>
-            </Card>
-            <Card>
-              <img src={properties[0].cardBackground} alt='360' />
-              <Overlay />
-              <CardBottom>
-                <BottomTitleDiv>
-                  <div>
-                    <img src={properties[0].icon} alt='360' />
-                  </div>
-                  <p>{properties[0].cardTitle}</p>
-                </BottomTitleDiv>
-                <CustomButton>
-                  <BsPlusLg color='#FFFFFF' size={26} />
-                </CustomButton>
-              </CardBottom>
-            </Card>
+            {properties.map((property) => (
+              <Card
+                isSelected={property.id === selectedContent.id}
+                key={property.id}
+                onClick={() => {
+                  setSelectedContent(property);
+                }}
+              >
+                <img src={property.cardBackground} alt='360' />
+                <Overlay />
+                <CardBottom>
+                  <BottomTitleDiv>
+                    <div>
+                      <img src={property.icon} alt='360' />
+                    </div>
+                    <p>{property.cardTitle}</p>
+                  </BottomTitleDiv>
+                  <CustomButton>
+                    <BsPlusLg color='#FFFFFF' size={26} />
+                  </CustomButton>
+                </CardBottom>
+              </Card>
+            ))}
           </Cards>
           <SelectionButtons>
-            <CustomButton>
+            <CustomButton
+              isDisabled={isButtonDisabled('left')}
+              onClick={() => {
+                if (!isButtonDisabled('left')) {
+                  console.log('oi');
+                  setSelectedContent((prevContent) => {
+                    const newContent = properties.find(
+                      (el) => el.id === prevContent.id - 1
+                    );
+                    return newContent || prevContent;
+                  });
+                }
+              }}
+            >
               <BsArrowLeft color='#FFFFFF' size={30} />
             </CustomButton>
-            <CustomButton>
+            <CustomButton
+              isDisabled={isButtonDisabled('right')}
+              onClick={() => {
+                console.log('oi');
+
+                if (!isButtonDisabled('right')) {
+                  setSelectedContent((prevContent) => {
+                    const newContent = properties.find(
+                      (el) => el.id === prevContent.id + 1
+                    );
+                    console.log(newContent);
+                    return newContent || prevContent;
+                  });
+                }
+              }}
+            >
               <BsArrowRight color='#FFFFFF' size={30} />
             </CustomButton>
           </SelectionButtons>
         </CardDiv>
         <Pagination>
-          <p>1</p>
+          <p>{selectedContent.id}</p>
           <div></div>
-          <p>2</p>
+          <p>{properties.length}</p>
         </Pagination>
       </Wrapper>
     </>

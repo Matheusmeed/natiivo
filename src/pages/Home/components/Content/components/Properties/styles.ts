@@ -145,23 +145,33 @@ export const BottomTitleDiv = styled.div`
   }
 `;
 
-export const CustomButton = styled.button`
+export const CustomButton = styled.button<{ isDisabled?: boolean }>`
   border: none;
   width: 56px;
   height: 56px;
   padding: 16px;
   border-radius: 1000px;
   gap: 35px;
-  background: #ffffff14;
-  box-shadow: 1px 1px 5px 1px #ffffff52 inset, 0px 4px 4px 0px #00000040;
+  background: ${({ isDisabled }) => (isDisabled ? '#0000000f' : '#ffffff14')};
+  box-shadow: ${({ isDisabled }) =>
+    isDisabled
+      ? '1px 1px 5px 1px #ffffff21 inset, 0px 4px 4px 0px #00000040'
+      : '1px 1px 5px 1px #ffffff52 inset, 0px 4px 4px 0px #00000040'};
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
-  cursor: pointer;
+  cursor: ${({ isDisabled }) => (isDisabled ? 'unset' : 'pointer')};
 
   &:hover {
-    box-shadow: 1px 2px 5px 2px #ffffff96 inset, 0px 4px 4px 0px #00000040;
+    box-shadow: ${({ isDisabled }) =>
+      isDisabled
+        ? '1px 1px 5px 1px #ffffff21 inset, 0px 4px 4px 0px #00000040'
+        : '1px 2px 5px 2px #ffffff96 inset, 0px 4px 4px 0px #00000040'};
     transition: 0.3s;
+  }
+
+  * {
+    color: ${({ isDisabled }) => (isDisabled ? '#cfcfcfb3' : '#ffffff')};
   }
 `;
 
