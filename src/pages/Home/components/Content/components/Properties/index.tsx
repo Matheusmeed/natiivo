@@ -78,11 +78,7 @@ const Properties: React.FC<{
                       </div>
                       <p>{property.cardTitle}</p>
                     </BottomTitleDiv>
-                    <CustomButton
-                      onClick={() => {
-                        handleContentChange(property);
-                      }}
-                    >
+                    <CustomButton>
                       <BsPlusLg color='#FFFFFF' size={26} />
                     </CustomButton>
                   </CardBottom>
