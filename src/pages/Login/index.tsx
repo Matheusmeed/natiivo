@@ -12,7 +12,7 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper background='/images/background/mainBackground.png'>
       <GradientWrapper>
         {isLogin ? <LoginCard /> : <StandByContent openLogin={openLogin} />}
         <CopyRight />

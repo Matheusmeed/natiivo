@@ -16,8 +16,9 @@ import Properties from './components/Properties';
 type OptionsType = 'HOME' | 'PROJECT' | 'SALES';
 const Content: React.FC<{
   setShowProperties: React.Dispatch<React.SetStateAction<boolean>>;
+  changeBackground: (newBackground: string) => void;
   showProperties: boolean;
-}> = ({ showProperties, setShowProperties }) => {
+}> = ({ showProperties, setShowProperties, changeBackground }) => {
   const [selectedOption, setSelectedOption] = useState<OptionsType>('HOME');
 
   const changeSelectedOption = (newOption: OptionsType) => {
@@ -69,7 +70,13 @@ const Content: React.FC<{
           <img src='/images/util/natiivoText.png' alt='natiivo' />
         </LogoDiv>
       </HeaderDiv>
-      <BodyDiv>{!showProperties ? <Properties /> : <InitialContent />}</BodyDiv>
+      <BodyDiv>
+        {!!showProperties ? (
+          <Properties changeBackground={changeBackground} />
+        ) : (
+          <InitialContent />
+        )}
+      </BodyDiv>
     </Wrapper>
   );
 };

@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
 `;
 
 export const TitleDiv = styled.div`
-  margin-left: 40px;
+  margin-left: 60px;
   margin-right: 140px;
   display: flex;
   flex-direction: column;
@@ -167,7 +167,7 @@ export const CustomButton = styled.button`
 
 export const SelectionButtons = styled.div`
   margin-left: 104px;
-  gap: 48px;
+  gap: 40px;
   margin-bottom: 20px;
   margin-top: 36px;
   display: flex;

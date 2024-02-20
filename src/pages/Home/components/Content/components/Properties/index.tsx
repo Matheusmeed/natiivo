@@ -14,14 +14,22 @@ import {
 } from './styles';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
+import { properties } from '../../../../../../shared/util/properties';
+import { useEffect } from 'react';
 
-const Properties: React.FC = () => {
+const Properties: React.FC<{
+  changeBackground: (newBackground: string) => void;
+}> = ({ changeBackground }) => {
+  useEffect(() => {
+    changeBackground(properties[0].background);
+  }, [changeBackground]);
+
   return (
     <>
       <Wrapper>
         <TitleDiv>
-          <h1>360° BUILDING</h1>
-          <p>View the building and availability</p>
+          <h1>{properties[0].title}</h1>
+          <p>{properties[0].description}</p>
           <button>
             <p>LET ME IN</p> <HiArrowNarrowRight style={{ marginBottom: 2 }} />
           </button>
@@ -29,14 +37,14 @@ const Properties: React.FC = () => {
         <CardDiv>
           <Cards>
             <Card isSelected>
-              <img src='/images/properties/360.jpg' alt='360' />
+              <img src={properties[0].cardBackground} alt='360' />
               <Overlay />
               <CardBottom>
                 <BottomTitleDiv>
                   <div>
-                    <img src='/images/icon/360.png' alt='360' />
+                    <img src={properties[0].icon} alt='360' />
                   </div>
-                  <p>BUILDING</p>
+                  <p>{properties[0].cardTitle}</p>
                 </BottomTitleDiv>
                 <CustomButton>
                   <BsPlusLg color='#FFFFFF' size={26} />
@@ -44,44 +52,14 @@ const Properties: React.FC = () => {
               </CardBottom>
             </Card>
             <Card>
-              <img src='/images/properties/360.jpg' alt='360' />
+              <img src={properties[0].cardBackground} alt='360' />
               <Overlay />
               <CardBottom>
                 <BottomTitleDiv>
                   <div>
-                    <img src='/images/icon/360.png' alt='360' />
+                    <img src={properties[0].icon} alt='360' />
                   </div>
-                  <p>BUILDING</p>
-                </BottomTitleDiv>
-                <CustomButton>
-                  <BsPlusLg color='#FFFFFF' size={26} />
-                </CustomButton>
-              </CardBottom>
-            </Card>
-            <Card>
-              <img src='/images/properties/360.jpg' alt='360' />
-              <Overlay />
-              <CardBottom>
-                <BottomTitleDiv>
-                  <div>
-                    <img src='/images/icon/360.png' alt='360' />
-                  </div>
-                  <p>BUILDING</p>
-                </BottomTitleDiv>
-                <CustomButton>
-                  <BsPlusLg color='#FFFFFF' size={26} />
-                </CustomButton>
-              </CardBottom>
-            </Card>
-            <Card>
-              <img src='/images/properties/360.jpg' alt='360' />
-              <Overlay />
-              <CardBottom>
-                <BottomTitleDiv>
-                  <div>
-                    <img src='/images/icon/360.png' alt='360' />
-                  </div>
-                  <p>BUILDING</p>
+                  <p>{properties[0].cardTitle}</p>
                 </BottomTitleDiv>
                 <CustomButton>
                   <BsPlusLg color='#FFFFFF' size={26} />

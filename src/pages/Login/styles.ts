@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ background: string }>`
   overflow: hidden;
   display: flex;
   height: 100vh;
   width: 100%;
-  background-image: url('/images/background/mainBackground.png');
+  background-image: ${({ background }) => `url(${background})`};
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
