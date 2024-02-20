@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import {
-  slideInFromRight,
+  fadeInToLeft,
+  fadeInToRight,
   slideInFromTop,
 } from '../../../../../../shared/animation/animations';
 
@@ -13,8 +14,9 @@ export const Wrapper = styled.div`
   justify-content: space-between;
 `;
 
-export const TitleDiv = styled.div<{ shouldAnimate: boolean }>`
-  animation: ${({ shouldAnimate }) => (shouldAnimate ? slideInFromTop : 'none')}
+export const TitleDiv = styled.div<{ shouldAnimateTitle: boolean }>`
+  animation: ${({ shouldAnimateTitle }) =>
+      shouldAnimateTitle ? slideInFromTop : 'none'}
     0.9s ease-in-out;
   margin-left: 60px;
   margin-right: 140px;
@@ -74,9 +76,15 @@ export const CardDiv = styled.div`
   flex-direction: column;
 `;
 
-export const Cards = styled.div<{ shouldAnimate: boolean }>`
-  animation: ${({ shouldAnimate }) =>
-    shouldAnimate ? slideInFromRight : 'none'};
+export const Cards = styled.div<{
+  shouldAnimateCards: boolean;
+  isRight: boolean;
+}>`
+  ${({ shouldAnimateCards, isRight }) =>
+    shouldAnimateCards &&
+    css`
+      animation: ${isRight ? fadeInToLeft : fadeInToRight} 0.9s ease-in-out;
+    `}
   height: 532px;
   display: flex;
   align-items: center;

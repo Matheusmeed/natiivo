@@ -26,3 +26,31 @@ export const slideTitleDivInFromRight = keyframes`
     transform: translateX(-50%) translateY(-40%);
   }
 `;
+
+export const fadeInToLeft = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    transform: translateX(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    transform: translateX(0);
+
+  }
+`;
+
+export const fadeInToRight = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    transform: translateX(0);
+
+  }
+`;
