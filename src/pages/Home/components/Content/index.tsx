@@ -29,7 +29,12 @@ const Content: React.FC<{
     <Wrapper>
       <InteractiveButton
         onClick={() => {
-          setShowProperties((prevState) => !prevState);
+          setShowProperties((prevState) => {
+            if (!!prevState) {
+              changeBackground('/images/background/mainBackground.png');
+            }
+            return !prevState;
+          });
         }}
       >
         {showProperties ? (
