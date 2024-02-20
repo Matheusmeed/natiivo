@@ -82,6 +82,10 @@ export const LogoDiv = styled.div`
   align-items: center;
   gap: 16px;
   margin-left: 40px;
+
+  @media (max-width: 770px) {
+    display: none;
+  }
 `;
 
 export const BodyDiv = styled.div`

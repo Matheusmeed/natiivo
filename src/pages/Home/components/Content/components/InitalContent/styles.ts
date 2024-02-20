@@ -30,4 +30,43 @@ export const TitleDiv = styled.div`
     color: #dadada;
     margin-bottom: 60px;
   }
+
+  @media (max-width: 870px) {
+    width: 460px;
+    h1 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 620px) {
+    width: 260px;
+    text-align: center;
+
+    h1 {
+      line-height: 36px;
+    }
+
+    p {
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 420px) {
+    width: 230px;
+    text-align: right;
+
+    h1 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 15px;
+      text-align: right;
+    }
+  }
 `;

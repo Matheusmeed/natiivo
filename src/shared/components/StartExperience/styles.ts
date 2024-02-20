@@ -47,4 +47,12 @@ export const StartDiv = styled.div<{ isAtHome: boolean }>`
       height: 40px;
     }
   }
+
+  @media (max-width: 420px) {
+    align-items: flex-end;
+    margin-right: 40px;
+    button {
+      bottom: 20px;
+    }
+  }
 `;
