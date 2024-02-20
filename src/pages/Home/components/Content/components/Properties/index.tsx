@@ -24,19 +24,16 @@ const Properties: React.FC<{
   changeBackground: (newBackground: string) => void;
 }> = ({ changeBackground }) => {
   const [selectedContent, setSelectedContent] = useState(properties[0]);
-  const [shouldAnimateTitle, setShouldAnimateTitle] = useState(true);
   const [shouldAnimateCards, setShouldAnimateCards] = useState(true);
-  const [isToRight, setIsToRight] = useState(true);
+  const [position, setPosition] = useState<'right' | 'left' | ''>('');
 
   useEffect(() => {
     changeBackground(selectedContent.background);
-    setShouldAnimateTitle(true);
     setShouldAnimateCards(true);
   }, [changeBackground, selectedContent.background]);
 
   const handleContentChange = (property: IProperty) => {
     setSelectedContent(property);
-    // setShouldAnimateTitle(false);
     setShouldAnimateCards(false);
   };
 
@@ -52,7 +49,7 @@ const Properties: React.FC<{
   return (
     <>
       <Wrapper>
-        <TitleDiv shouldAnimateTitle={shouldAnimateTitle}>
+        <TitleDiv>
           <h1>{selectedContent.title}</h1>
           <p>{selectedContent.description}</p>
           <button>
@@ -60,7 +57,7 @@ const Properties: React.FC<{
           </button>
         </TitleDiv>
         <CardDiv>
-          <Cards shouldAnimateCards={shouldAnimateCards} isRight={isToRight}>
+          <Cards shouldAnimateCards={shouldAnimateCards} position={position}>
             {properties.map((property) => {
               if (
                 property.id < selectedContent.id &&
@@ -98,7 +95,7 @@ const Properties: React.FC<{
               isDisabled={isButtonDisabled('left')}
               onClick={() => {
                 if (!isButtonDisabled('left')) {
-                  setIsToRight(false);
+                  setPosition('left');
                   const newContent = properties.find(
                     (el) => el.id === selectedContent.id - 1
                   );
@@ -112,7 +109,7 @@ const Properties: React.FC<{
               isDisabled={isButtonDisabled('right')}
               onClick={() => {
                 if (!isButtonDisabled('right')) {
-                  setIsToRight(true);
+                  setPosition('right');
                   const newContent = properties.find(
                     (el) => el.id === selectedContent.id + 1
                   );
