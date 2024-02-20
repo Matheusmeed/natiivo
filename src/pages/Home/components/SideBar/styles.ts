@@ -15,6 +15,7 @@ export const Wrapper = styled.div`
       rgba(255, 255, 255, 0) 106.54%
     )
     1;
+  background-clip: padding-box;
 `;
 
 export const SelectionDiv = styled.div`

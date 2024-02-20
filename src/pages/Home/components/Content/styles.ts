@@ -20,7 +20,7 @@ export const InteractiveButton = styled.button`
   border-radius: 200px;
   width: 40px;
   height: 40px;
-  background: #403b36;
+  background: #ffffff14;
   box-shadow: 1px 1px 5px 1px #ffffff52 inset, 0px 4px 4px 0px #00000040;
   backdrop-filter: blur(5px);
   cursor: pointer;
