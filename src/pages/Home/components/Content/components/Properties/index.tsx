@@ -1,4 +1,6 @@
 import { BsPlusLg } from 'react-icons/bs';
+import { HiOutlineMinus } from 'react-icons/hi';
+
 import {
   BottomTitleDiv,
   Card,
@@ -26,6 +28,9 @@ const Properties: React.FC<{
   const [selectedContent, setSelectedContent] = useState(properties[0]);
   const [shouldAnimateCards, setShouldAnimateCards] = useState(true);
   const [position, setPosition] = useState<'right' | 'left' | ''>('');
+  const [cardIcons, setCardIcons] = useState(
+    properties.map(() => ({ isPlus: true }))
+  );
 
   useEffect(() => {
     changeBackground(selectedContent.background);
@@ -35,6 +40,14 @@ const Properties: React.FC<{
   const handleContentChange = (property: IProperty) => {
     setSelectedContent(property);
     setShouldAnimateCards(false);
+  };
+
+  const handleToggleIcon = (index: number) => {
+    setCardIcons((prevIcons) =>
+      prevIcons.map((icon, i) =>
+        i === index ? { isPlus: !icon.isPlus } : { isPlus: icon.isPlus }
+      )
+    );
   };
 
   const isButtonDisabled = (direction: 'left' | 'right') => {
@@ -58,7 +71,7 @@ const Properties: React.FC<{
         </TitleDiv>
         <CardDiv>
           <Cards shouldAnimateCards={shouldAnimateCards} position={position}>
-            {properties.map((property) => {
+            {properties.map((property, index) => {
               if (
                 property.id < selectedContent.id &&
                 property.id < properties.length - 1
@@ -78,8 +91,12 @@ const Properties: React.FC<{
                       </div>
                       <p>{property.cardTitle}</p>
                     </BottomTitleDiv>
-                    <CustomButton>
-                      <BsPlusLg color='#FFFFFF' size={26} />
+                    <CustomButton onClick={() => handleToggleIcon(index)}>
+                      {cardIcons[index].isPlus ? (
+                        <BsPlusLg color='#FFFFFF' size={26} />
+                      ) : (
+                        <HiOutlineMinus color='#FFFFFF' size={26} />
+                      )}
                     </CustomButton>
                   </CardBottom>
                 </Card>
