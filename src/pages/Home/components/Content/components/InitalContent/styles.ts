@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { slideTitleDivInFromRight } from '../../../../../../shared/animation/animations';
 
 export const TitleDiv = styled.div`
   position: absolute;
-  top: 60%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -40%);
   display: flex;
@@ -10,6 +11,7 @@ export const TitleDiv = styled.div`
   align-items: center;
   gap: 30px;
   color: #ffffff;
+  animation: ${slideTitleDivInFromRight} 0.9s ease-in-out;
 
   h1 {
     font-size: 48px;

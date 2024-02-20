@@ -22,6 +22,7 @@ export const InteractiveButton = styled.button`
   height: 40px;
   background: #403b36;
   box-shadow: 1px 1px 5px 1px #ffffff52 inset, 0px 4px 4px 0px #00000040;
+  backdrop-filter: blur(5px);
   cursor: pointer;
 
   &:hover {

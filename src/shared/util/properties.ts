@@ -1,3 +1,13 @@
+export interface IProperty {
+  icon: string;
+  cardBackground: string;
+  background: string;
+  title: string;
+  cardTitle: string;
+  description: string;
+  id: number;
+}
+
 export const properties = [
   {
     icon: '/images/icon/360.png',

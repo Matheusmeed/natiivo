@@ -38,6 +38,7 @@ export const StartDiv = styled.div<{ isAtHome: boolean }>`
     align-items: center;
     transition: 0.2s all;
     box-shadow: 1px 1px 5px 1px #ffffff52 inset, 0px 4px 4px 0px #00000040;
+    backdrop-filter: blur(2px);
     &:hover {
       cursor: pointer;
       background-color: #ffffff2b;

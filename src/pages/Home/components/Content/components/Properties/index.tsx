@@ -14,17 +14,27 @@ import {
 } from './styles';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
-import { properties } from '../../../../../../shared/util/properties';
+import {
+  IProperty,
+  properties,
+} from '../../../../../../shared/util/properties';
 import { useEffect, useState } from 'react';
 
 const Properties: React.FC<{
   changeBackground: (newBackground: string) => void;
 }> = ({ changeBackground }) => {
   const [selectedContent, setSelectedContent] = useState(properties[0]);
+  const [shouldAnimate, setShouldAnimate] = useState(true);
 
   useEffect(() => {
     changeBackground(selectedContent.background);
+    setShouldAnimate(true);
   }, [changeBackground, selectedContent.background]);
+
+  const handleContentChange = (property: IProperty) => {
+    setSelectedContent(property);
+    setShouldAnimate(false);
+  };
 
   const isButtonDisabled = (direction: 'left' | 'right') => {
     if (
@@ -38,7 +48,7 @@ const Properties: React.FC<{
   return (
     <>
       <Wrapper>
-        <TitleDiv>
+        <TitleDiv shouldAnimate={shouldAnimate}>
           <h1>{selectedContent.title}</h1>
           <p>{selectedContent.description}</p>
           <button>
@@ -46,7 +56,7 @@ const Properties: React.FC<{
           </button>
         </TitleDiv>
         <CardDiv>
-          <Cards>
+          <Cards shouldAnimate={shouldAnimate}>
             {properties.map((property) => {
               if (
                 property.id < selectedContent.id &&
@@ -69,7 +79,7 @@ const Properties: React.FC<{
                     </BottomTitleDiv>
                     <CustomButton
                       onClick={() => {
-                        setSelectedContent(property);
+                        handleContentChange(property);
                       }}
                     >
                       <BsPlusLg color='#FFFFFF' size={26} />
@@ -84,13 +94,10 @@ const Properties: React.FC<{
               isDisabled={isButtonDisabled('left')}
               onClick={() => {
                 if (!isButtonDisabled('left')) {
-                  console.log('oi');
-                  setSelectedContent((prevContent) => {
-                    const newContent = properties.find(
-                      (el) => el.id === prevContent.id - 1
-                    );
-                    return newContent || prevContent;
-                  });
+                  const newContent = properties.find(
+                    (el) => el.id === selectedContent.id - 1
+                  );
+                  handleContentChange(newContent || selectedContent);
                 }
               }}
             >
@@ -100,13 +107,10 @@ const Properties: React.FC<{
               isDisabled={isButtonDisabled('right')}
               onClick={() => {
                 if (!isButtonDisabled('right')) {
-                  setSelectedContent((prevContent) => {
-                    const newContent = properties.find(
-                      (el) => el.id === prevContent.id + 1
-                    );
-                    console.log(newContent);
-                    return newContent || prevContent;
-                  });
+                  const newContent = properties.find(
+                    (el) => el.id === selectedContent.id + 1
+                  );
+                  handleContentChange(newContent || selectedContent);
                 }
               }}
             >
