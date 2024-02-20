@@ -26,7 +26,7 @@ const SideBar: React.FC<{ showProperties: boolean }> = ({ showProperties }) => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper isInitialPage={!showProperties}>
       {!showProperties && (
         <SelectionDiv>
           <SelectionButton

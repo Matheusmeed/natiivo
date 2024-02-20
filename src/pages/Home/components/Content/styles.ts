@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-export const InteractiveButton = styled.button`
+export const InteractiveButton = styled.button<{ isInitialPage: boolean }>`
   z-index: 2;
   position: absolute;
   top: 50%;
@@ -31,10 +31,10 @@ export const InteractiveButton = styled.button`
   }
 
   @media (max-width: 480px) {
-    left: 59.3px;
+    left: 78.3px;
   }
   @media (max-width: 420px) {
-    left: 39.7px;
+    left: ${({ isInitialPage }) => (isInitialPage ? '78.3px' : '39.7px')};
   }
 `;
 
