@@ -1,8 +1,13 @@
+import { BsPlusLg } from 'react-icons/bs';
 import {
+  BottomTitleDiv,
   Card,
+  CardAddButton,
+  CardBottom,
   CardDiv,
   Cards,
   LeftButton,
+  Overlay,
   RightButton,
   SelectionButtons,
   TitleDiv,
@@ -23,9 +28,66 @@ const Properties: React.FC = () => {
         </TitleDiv>
         <CardDiv>
           <Cards>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
+            <Card isSelected>
+              <img src='/images/properties/360.jpg' alt='360' />
+              <Overlay />
+              <CardBottom>
+                <BottomTitleDiv>
+                  <div>
+                    <img src='/images/icon/360.png' alt='360' />
+                  </div>
+                  <p>BUILDING</p>
+                </BottomTitleDiv>
+                <CardAddButton>
+                  <BsPlusLg color='#FFFFFF' size={26} />
+                </CardAddButton>
+              </CardBottom>
+            </Card>
+            <Card>
+              <img src='/images/properties/360.jpg' alt='360' />
+              <Overlay />
+              <CardBottom>
+                <BottomTitleDiv>
+                  <div>
+                    <img src='/images/icon/360.png' alt='360' />
+                  </div>
+                  <p>BUILDING</p>
+                </BottomTitleDiv>
+                <CardAddButton>
+                  <BsPlusLg color='#FFFFFF' size={26} />
+                </CardAddButton>
+              </CardBottom>
+            </Card>
+            <Card>
+              <img src='/images/properties/360.jpg' alt='360' />
+              <Overlay />
+              <CardBottom>
+                <BottomTitleDiv>
+                  <div>
+                    <img src='/images/icon/360.png' alt='360' />
+                  </div>
+                  <p>BUILDING</p>
+                </BottomTitleDiv>
+                <CardAddButton>
+                  <BsPlusLg color='#FFFFFF' size={26} />
+                </CardAddButton>
+              </CardBottom>
+            </Card>
+            <Card>
+              <img src='/images/properties/360.jpg' alt='360' />
+              <Overlay />
+              <CardBottom>
+                <BottomTitleDiv>
+                  <div>
+                    <img src='/images/icon/360.png' alt='360' />
+                  </div>
+                  <p>BUILDING</p>
+                </BottomTitleDiv>
+                <CardAddButton>
+                  <BsPlusLg color='#FFFFFF' size={26} />
+                </CardAddButton>
+              </CardBottom>
+            </Card>
           </Cards>
           <SelectionButtons>
             <LeftButton></LeftButton>

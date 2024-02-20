@@ -6,11 +6,11 @@ export const Card = styled.div`
   max-height: 700px;
   padding: 48px;
   border-radius: 16px;
-  box-shadow: 1px 1px 5px 1px #ffffff52 inset, 0px 4px 4px 0px #00000040;
   background: #000000a3;
+  box-shadow: 1px 1px 5px 1px #ffffff52 inset, 0px 4px 4px 0px #00000040;
+  backdrop-filter: blur(5px);
   display: flex;
   gap: 54px;
-  backdrop-filter: blur(5px);
 `;
 
 export const LeftSide = styled.div`
@@ -25,6 +25,7 @@ export const LeftSide = styled.div`
 export const Image = styled.img`
   width: 100%;
   height: 100%;
+  overflow: hidden;
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -37,6 +38,7 @@ export const GradientOverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   background: linear-gradient(
     180.1deg,
     rgba(0, 0, 0, 0) 62.88%,
@@ -217,6 +219,7 @@ export const LoginDiv = styled.div`
 
 export const SubmitLoginDiv = styled.div`
   width: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 

@@ -9,7 +9,8 @@ import {
   Wrapper,
 } from './styles';
 import InitialContent from './components/InitalContent';
-import { FaPlus, FaMinus } from 'react-icons/fa6';
+import { BsPlusLg } from 'react-icons/bs';
+import { PiMinusThin } from 'react-icons/pi';
 import Properties from './components/Properties';
 
 type OptionsType = 'HOME' | 'PROJECT' | 'SALES';
@@ -31,9 +32,9 @@ const Content: React.FC<{
         }}
       >
         {showProperties ? (
-          <FaMinus color='#FFFFFF' size={20} />
+          <PiMinusThin color='#FFFFFF' size={20} />
         ) : (
-          <FaPlus color='#FFFFFF' size={20} />
+          <BsPlusLg color='#FFFFFF' size={20} />
         )}
       </InteractiveButton>
       <HeaderDiv>

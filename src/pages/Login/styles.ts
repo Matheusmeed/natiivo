@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
 export const GradientWrapper = styled.div`
   height: 100vh;
   width: 100%;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
