@@ -12,7 +12,7 @@ export const Card = styled.div`
   backdrop-filter: blur(5px);
   display: flex;
   gap: 54px;
-  animation: ${slideInFromRight} 0.9s ease-in-out;
+  animation: ${slideInFromRight} 1.2s ease-in-out;
 
   div {
     animation: ${slideInFromRight} 1.2s ease-in-out;
