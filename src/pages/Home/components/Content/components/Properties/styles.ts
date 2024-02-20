@@ -13,6 +13,14 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 840px) {
+    margin-left: 60px;
+  }
+
+  @media (max-width: 420px) {
+    margin-left: 30px;
+  }
 `;
 
 export const TitleDiv = styled.div`
@@ -71,6 +79,25 @@ export const TitleDiv = styled.div`
       transition: 0.6s;
     }
   }
+
+  @media (max-width: 1120px) {
+    margin-right: 10px;
+    width: 560px;
+
+    h1 {
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+
+  @media (max-width: 840px) {
+    display: none;
+  }
 `;
 
 export const CardDiv = styled.div`
@@ -82,6 +109,10 @@ export const CardDiv = styled.div`
   height: 600px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 1160px) {
+    height: 520px;
+  }
 `;
 
 export const Cards = styled.div<{
@@ -110,6 +141,10 @@ export const Cards = styled.div<{
             ${fadeInToRight} 0.9s ease-in-out
           `};
     `}
+
+  @media (max-width: 1160px) {
+    height: 420px;
+  }
 `;
 
 export const Card = styled.div<{ isSelected?: boolean }>`
@@ -126,6 +161,13 @@ export const Card = styled.div<{ isSelected?: boolean }>`
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  @media (max-width: 1160px) {
+    width: ${({ isSelected }) => (isSelected ? '250px' : '208px')};
+    height: ${({ isSelected }) => (isSelected ? '347px' : '300px')};
+    min-width: ${({ isSelected }) => (isSelected ? '250px' : '208px')};
+    min-height: ${({ isSelected }) => (isSelected ? '347px' : '300px')};
   }
 `;
 
@@ -216,6 +258,11 @@ export const SelectionButtons = styled.div`
   margin-bottom: 20px;
   margin-top: 36px;
   display: flex;
+
+  @media (max-width: 1160px) {
+    margin-left: 47px;
+    margin-top: -12px;
+  }
 `;
 
 export const Pagination = styled.div`

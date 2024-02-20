@@ -16,6 +16,14 @@ export const Wrapper = styled.div`
     )
     1;
   background-clip: padding-box;
+
+  @media (max-width: 480px) {
+    min-width: 60px;
+  }
+
+  @media (max-width: 420px) {
+    min-width: 40px;
+  }
 `;
 
 export const SelectionDiv = styled.div`
