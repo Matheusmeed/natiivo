@@ -10,7 +10,6 @@ export const Wrapper = styled.div`
 `;
 
 export const TitleDiv = styled.div`
-  border: 1px solid red;
   margin-left: 40px;
   margin-right: 140px;
   display: flex;
@@ -62,7 +61,6 @@ export const TitleDiv = styled.div`
 `;
 
 export const CardDiv = styled.div`
-  border: 1px solid purple;
   width: 100%;
   overflow: hidden;
   height: 600px;
@@ -173,4 +171,42 @@ export const SelectionButtons = styled.div`
   margin-bottom: 20px;
   margin-top: 36px;
   display: flex;
+`;
+
+export const Pagination = styled.div`
+  color: white;
+  position: fixed;
+  bottom: 30px;
+  right: 26px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0.5px;
+    text-align: left;
+  }
+
+  div {
+    height: 1px;
+    width: 48px;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.32) 12.9%,
+        rgba(255, 255, 255, 0) 106.54%
+      )
+      1;
+  }
+
+  :first-child {
+    color: #ffffff;
+  }
+
+  :last-child {
+    color: #b0b0b0;
+  }
 `;

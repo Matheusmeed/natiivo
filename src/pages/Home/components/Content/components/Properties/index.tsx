@@ -7,6 +7,7 @@ import {
   Cards,
   CustomButton,
   Overlay,
+  Pagination,
   SelectionButtons,
   TitleDiv,
   Wrapper,
@@ -97,6 +98,11 @@ const Properties: React.FC = () => {
             </CustomButton>
           </SelectionButtons>
         </CardDiv>
+        <Pagination>
+          <p>1</p>
+          <div></div>
+          <p>2</p>
+        </Pagination>
       </Wrapper>
     </>
   );
