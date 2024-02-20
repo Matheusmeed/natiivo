@@ -31,7 +31,7 @@ const Content: React.FC<{
         onClick={() => {
           setShowProperties((prevState) => {
             if (!!prevState) {
-              changeBackground('/images/background/mainBackground.png');
+              changeBackground('');
             }
             return !prevState;
           });

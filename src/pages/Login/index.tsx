@@ -12,7 +12,8 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <Wrapper background='/images/background/mainBackground.png'>
+    <Wrapper>
+      <video src='/videos/video_background.mp4' autoPlay muted loop></video>
       <GradientWrapper>
         {isLogin ? <LoginCard /> : <StandByContent openLogin={openLogin} />}
         <CopyRight />

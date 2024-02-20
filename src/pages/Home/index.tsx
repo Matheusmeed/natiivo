@@ -6,9 +6,7 @@ import { HomeDiv } from './styles';
 
 const HomePage: React.FC = () => {
   const [showProperties, setShowProperties] = useState(false);
-  const [background, setBackground] = useState(
-    '/images/background/mainBackground.png'
-  );
+  const [background, setBackground] = useState('');
 
   const changeBackground = (newBackground: string) => {
     setBackground(newBackground);
@@ -17,6 +15,9 @@ const HomePage: React.FC = () => {
   return (
     <div>
       <Wrapper background={background}>
+        {!background && (
+          <video src='/videos/video_background.mp4' autoPlay muted loop></video>
+        )}
         <GradientWrapper>
           <HomeDiv>
             <SideBar showProperties={showProperties} />
