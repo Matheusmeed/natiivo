@@ -44,7 +44,7 @@ const SideBar: React.FC<{ showProperties: boolean }> = ({ showProperties }) => {
               changeSelectedOption('return');
             }}
           >
-            <img src='/images/icon/return.png' alt='return' />
+            <img src='/images/icon/tour.png' alt='return' />
           </SelectionButton>
           <SquareDots />
           <SelectionButton
@@ -54,7 +54,7 @@ const SideBar: React.FC<{ showProperties: boolean }> = ({ showProperties }) => {
             }}
           >
             <img
-              src='/images/icon/chart.png'
+              src='/images/icon/amenities.png'
               alt='chart'
               style={{ marginRight: 1 }}
             />
@@ -66,7 +66,7 @@ const SideBar: React.FC<{ showProperties: boolean }> = ({ showProperties }) => {
               changeSelectedOption('location');
             }}
           >
-            <img src='/images/icon/location.png' alt='location' />
+            <img src='/images/icon/surroundings.png' alt='location' />
           </SelectionButton>
           <SquareDots />
           <SelectionButton
