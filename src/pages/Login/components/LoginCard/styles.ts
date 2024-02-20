@@ -17,6 +17,10 @@ export const Card = styled.div`
   div {
     animation: ${slideInFromRight} 1.2s ease-in-out;
   }
+
+  @media (max-width: 500px) {
+    width: 96%;
+  }
 `;
 
 export const LeftSide = styled.div`
@@ -26,6 +30,10 @@ export const LeftSide = styled.div`
   border-radius: 8px;
   position: relative;
   box-shadow: 0px 4px 4px 0px #00000052;
+
+  @media (max-width: 1048px) {
+    display: none;
+  }
 `;
 
 export const Image = styled.img`
@@ -99,6 +107,13 @@ export const TitleDiv = styled.div`
     opacity: 0.7;
     max-width: 350px;
   }
+
+  @media (max-width: 500px) {
+    h2 {
+      font-size: 22px;
+      line-height: 27px;
+    }
+  }
 `;
 
 export const GuestDiv = styled.div`
@@ -158,6 +173,16 @@ export const GuestDiv = styled.div`
       transition: 0.6s;
     }
   }
+
+  @media (max-width: 390px) {
+    h3 {
+      font-size: 11px;
+    }
+
+    button {
+      height: 38px;
+    }
+  }
 `;
 
 export const BrokerDiv = styled.div`
@@ -207,6 +232,12 @@ export const BrokerDiv = styled.div`
     &:hover {
       box-shadow: 1px 1px 5px 1px #ffffffd9 inset, 0px 4px 4px 0px #00000040;
       transition: 0.6s;
+    }
+  }
+
+  @media (max-width: 390px) {
+    h3 {
+      font-size: 11px;
     }
   }
 `;
@@ -277,6 +308,7 @@ export const NoAccountDiv = styled.div`
   display: flex;
   flex-direction: row;
   gap: 6px;
+  flex-wrap: wrap;
 
   p {
     font-size: 14px;
@@ -289,5 +321,13 @@ export const NoAccountDiv = styled.div`
   :last-child {
     color: #ffe08f;
     cursor: pointer;
+  }
+
+  @media (max-width: 390px) {
+    flex-direction: column;
+    p {
+      margin: 0;
+      line-height: 10px;
+    }
   }
 `;

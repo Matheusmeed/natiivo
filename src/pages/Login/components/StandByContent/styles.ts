@@ -11,4 +11,10 @@ export const ContentDiv = styled.div`
   img {
     width: 484px;
   }
+
+  @media (max-width: 425px) {
+    img {
+      width: 374px;
+    }
+  }
 `;
