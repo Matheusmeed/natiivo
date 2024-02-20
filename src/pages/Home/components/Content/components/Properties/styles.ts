@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   position: absolute;
   width: 100%;
-  overflow: hidden;
   height: 90%;
   display: flex;
   align-items: center;
@@ -12,11 +11,12 @@ export const Wrapper = styled.div`
 
 export const TitleDiv = styled.div`
   border: 1px solid red;
-  margin-left: 70px;
-  margin-right: 40px;
+  margin-left: 40px;
+  margin-right: 140px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 900px;
 
   h1 {
     font-size: 48px;
@@ -71,22 +71,20 @@ export const CardDiv = styled.div`
 `;
 
 export const Cards = styled.div`
-  border: 1px solid blue;
   height: 532px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 24px;
   width: 100%;
-  overflow: hidden;
 `;
 
 export const Card = styled.div<{ isSelected?: boolean }>`
   position: relative;
   width: ${({ isSelected }) => (isSelected ? '362px' : '302px')};
-  height: ${({ isSelected }) => (isSelected ? '532px' : '432px')};
+  height: ${({ isSelected }) => (isSelected ? '500px' : '432px')};
   min-width: ${({ isSelected }) => (isSelected ? '362px' : '302px')};
-  min-height: ${({ isSelected }) => (isSelected ? '532px' : '432px')};
+  min-height: ${({ isSelected }) => (isSelected ? '500px' : '432px')};
   border-radius: 18.97px;
   box-shadow: 0px 4px 4px 0px #0000007a;
   overflow: hidden;
@@ -94,7 +92,6 @@ export const Card = styled.div<{ isSelected?: boolean }>`
   img {
     width: 100%;
     height: 100%;
-    overflow: hidden;
     object-fit: cover;
   }
 `;
@@ -105,7 +102,6 @@ export const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 67.63%,
@@ -117,7 +113,6 @@ export const CardBottom = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
-  overflow: hidden;
   display: flex;
   justify-content: space-between;
   padding: 10px 16px;
@@ -133,11 +128,11 @@ export const BottomTitleDiv = styled.div`
     width: 24px;
     display: flex;
     align-items: center;
+    overflow: hidden;
 
     img {
       width: 100%;
       height: 100%;
-      overflow: hidden;
       object-fit: cover;
     }
   }
@@ -152,7 +147,7 @@ export const BottomTitleDiv = styled.div`
   }
 `;
 
-export const CardAddButton = styled.button`
+export const CustomButton = styled.button`
   border: none;
   width: 56px;
   height: 56px;
@@ -172,6 +167,9 @@ export const CardAddButton = styled.button`
   }
 `;
 
-export const SelectionButtons = styled.div``;
-export const LeftButton = styled.button``;
-export const RightButton = styled.button``;
+export const SelectionButtons = styled.div`
+  display: flex;
+  gap: 48px;
+  margin-bottom: 20px;
+  margin-top: 36px;
+`;

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 `;
@@ -40,7 +39,6 @@ export const HeaderDiv = styled.div`
 
 export const NavigationDiv = styled.div`
   width: 100%;
-  overflow: hidden;
   margin-bottom: 15px;
   display: flex;
   gap: 18px;
@@ -89,5 +87,4 @@ export const BodyDiv = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
-  overflow: hidden;
 `;

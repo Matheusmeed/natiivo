@@ -2,13 +2,11 @@ import { BsPlusLg } from 'react-icons/bs';
 import {
   BottomTitleDiv,
   Card,
-  CardAddButton,
   CardBottom,
   CardDiv,
   Cards,
-  LeftButton,
+  CustomButton,
   Overlay,
-  RightButton,
   SelectionButtons,
   TitleDiv,
   Wrapper,
@@ -38,9 +36,9 @@ const Properties: React.FC = () => {
                   </div>
                   <p>BUILDING</p>
                 </BottomTitleDiv>
-                <CardAddButton>
+                <CustomButton>
                   <BsPlusLg color='#FFFFFF' size={26} />
-                </CardAddButton>
+                </CustomButton>
               </CardBottom>
             </Card>
             <Card>
@@ -53,9 +51,9 @@ const Properties: React.FC = () => {
                   </div>
                   <p>BUILDING</p>
                 </BottomTitleDiv>
-                <CardAddButton>
+                <CustomButton>
                   <BsPlusLg color='#FFFFFF' size={26} />
-                </CardAddButton>
+                </CustomButton>
               </CardBottom>
             </Card>
             <Card>
@@ -68,9 +66,9 @@ const Properties: React.FC = () => {
                   </div>
                   <p>BUILDING</p>
                 </BottomTitleDiv>
-                <CardAddButton>
+                <CustomButton>
                   <BsPlusLg color='#FFFFFF' size={26} />
-                </CardAddButton>
+                </CustomButton>
               </CardBottom>
             </Card>
             <Card>
@@ -83,15 +81,15 @@ const Properties: React.FC = () => {
                   </div>
                   <p>BUILDING</p>
                 </BottomTitleDiv>
-                <CardAddButton>
+                <CustomButton>
                   <BsPlusLg color='#FFFFFF' size={26} />
-                </CardAddButton>
+                </CustomButton>
               </CardBottom>
             </Card>
           </Cards>
           <SelectionButtons>
-            <LeftButton></LeftButton>
-            <RightButton></RightButton>
+            <CustomButton></CustomButton>
+            <CustomButton></CustomButton>
           </SelectionButtons>
         </CardDiv>
       </Wrapper>
