@@ -49,7 +49,7 @@ export const SelectionButton = styled.button<{ isSelected: boolean }>`
     background: #ffffff0f;
     box-shadow: 1px 1px 5px 1px #ffffff52 inset, 0px 4px 4px 0px #00000040;
     backdrop-filter: blur(5px);
-    transition: 0.3s;
+    transition: 0.6s;
   }
 `;
 
@@ -83,7 +83,7 @@ export const BottomOptions = styled.div`
     &:hover {
       * {
         color: white;
-        transition: 0.3s;
+        transition: 0.6s;
       }
 
       p {

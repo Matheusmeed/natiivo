@@ -65,10 +65,17 @@ export const TitleDiv = styled.div<{ shouldAnimateTitle: boolean }>`
       font-weight: 400;
       letter-spacing: 0.04em;
     }
+
+    &:hover {
+      background-color: #ffea94;
+      color: #000000;
+      transition: 0.6s;
+    }
   }
 `;
 
 export const CardDiv = styled.div`
+  margin-top: 50px;
   width: 100%;
   overflow: hidden;
   height: 600px;
@@ -183,7 +190,7 @@ export const CustomButton = styled.button<{ isDisabled?: boolean }>`
       isDisabled
         ? '1px 1px 5px 1px #ffffff21 inset, 0px 4px 4px 0px #00000040'
         : '1px 2px 5px 2px #ffffff96 inset, 0px 4px 4px 0px #00000040'};
-    transition: 0.3s;
+    transition: 0.6s;
   }
 
   * {

@@ -27,7 +27,7 @@ export const InteractiveButton = styled.button`
 
   &:hover {
     box-shadow: 1px 2px 5px 2px #ffffff96 inset, 0px 4px 4px 0px #00000040;
-    transition: 0.3s;
+    transition: 0.6s;
   }
 `;
 
@@ -72,7 +72,7 @@ export const NavigationOption = styled.button<{ isSelected?: boolean }>`
   &:hover {
     color: white;
     font-weight: bold;
-    transition: 0.3s;
+    transition: 0.6s;
   }
 `;
 

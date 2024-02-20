@@ -151,6 +151,12 @@ export const GuestDiv = styled.div`
     letter-spacing: 0.04em;
     text-align: center;
     cursor: pointer;
+
+    &:hover {
+      background-color: #ffea94;
+      color: #000000;
+      transition: 0.6s;
+    }
   }
 `;
 
@@ -196,6 +202,11 @@ export const BrokerDiv = styled.div`
       letter-spacing: 0em;
       text-align: left;
       color: #f6f6f6a6;
+    }
+
+    &:hover {
+      box-shadow: 1px 1px 5px 1px #ffffffd9 inset, 0px 4px 4px 0px #00000040;
+      transition: 0.6s;
     }
   }
 `;
@@ -252,6 +263,12 @@ export const SubmitLoginDiv = styled.div`
 
     @media (max-height: 722px) {
       margin-top: 2%;
+    }
+
+    &:hover {
+      background-color: #ffea94;
+      color: #000000;
+      transition: 0.6s;
     }
   }
 `;

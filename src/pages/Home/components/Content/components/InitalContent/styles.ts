@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { slideTitleDivInFromRight } from '../../../../../../shared/animation/animations';
 
 export const TitleDiv = styled.div`
+  width: 670px;
   position: absolute;
   top: 52%;
   left: 50%;
