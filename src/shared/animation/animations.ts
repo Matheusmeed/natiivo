@@ -29,9 +29,9 @@ export const slideTitleDivInFromRight = keyframes`
 
 export const fadeInToLeft = keyframes`
   0% {
-    opacity: 0;
+    opacity: 0.7;
     transform: translateY(10px);
-    transform: translateX(10%);
+    transform: translateX(40%);
   }
   100% {
     opacity: 1;
@@ -43,9 +43,9 @@ export const fadeInToLeft = keyframes`
 
 export const fadeInToRight = keyframes`
   0% {
-    opacity: 0;
+    opacity: 0.7;
     transform: translateY(10px);
-    transform: translateX(-20px);
+    transform: translateX(-360px);
   }
   100% {
     opacity: 1;

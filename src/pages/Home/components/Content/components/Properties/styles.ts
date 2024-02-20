@@ -76,6 +76,8 @@ export const TitleDiv = styled.div`
 export const CardDiv = styled.div`
   margin-top: 50px;
   width: 100%;
+  max-width: 1000px;
+  overflow: hidden;
   overflow: hidden;
   height: 600px;
   display: flex;
