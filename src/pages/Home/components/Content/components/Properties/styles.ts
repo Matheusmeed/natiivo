@@ -168,8 +168,9 @@ export const CustomButton = styled.button`
 `;
 
 export const SelectionButtons = styled.div`
-  display: flex;
+  margin-left: 104px;
   gap: 48px;
   margin-bottom: 20px;
   margin-top: 36px;
+  display: flex;
 `;

@@ -12,6 +12,7 @@ import {
   Wrapper,
 } from './styles';
 import { HiArrowNarrowRight } from 'react-icons/hi';
+import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
 
 const Properties: React.FC = () => {
   return (
@@ -88,8 +89,12 @@ const Properties: React.FC = () => {
             </Card>
           </Cards>
           <SelectionButtons>
-            <CustomButton></CustomButton>
-            <CustomButton></CustomButton>
+            <CustomButton>
+              <BsArrowLeft color='#FFFFFF' size={30} />
+            </CustomButton>
+            <CustomButton>
+              <BsArrowRight color='#FFFFFF' size={30} />
+            </CustomButton>
           </SelectionButtons>
         </CardDiv>
       </Wrapper>
