@@ -2,7 +2,10 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div<{ background?: string }>`
   overflow: hidden;
+  position: relative;
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   width: 100%;
   background: ${({ background }) =>
@@ -12,11 +15,13 @@ export const Wrapper = styled.div<{ background?: string }>`
   background-repeat: no-repeat;
 
   video {
-    z-index: 0;
     position: absolute;
     object-fit: cover;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
 `;
 
