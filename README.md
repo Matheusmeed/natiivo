@@ -1,46 +1,27 @@
-# Getting Started with Create React App
+<h1 align="center">NATIIVO / MIAMI</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## :camera_flash: Demonstração
 
-## Available Scripts
+<p>Você pode testar a aplicação aqui: https://natiivo-35ddd.web.app/login</p>
+<br>
+<img src='https://github.com/Matheusmeed/real-time-chat/assets/65987506/bcd9125d-688b-4584-b8a8-b6fa13aa4076'></img>
+<p> </p>
+<img src='https://github.com/Matheusmeed/real-time-chat/assets/65987506/e1c5d843-3930-4097-b958-b2e3138ec41a'></img>
+<p> </p>
+<img src='https://github.com/Matheusmeed/real-time-chat/assets/65987506/55d9212f-c9f1-47ab-930b-c0923f7a5ff1'></img>
+<p> </p>
+<img src='https://github.com/Matheusmeed/real-time-chat/assets/65987506/07bb3f30-3dcc-4ead-b132-c125d4f9c484'></img>
+<p> </p>
 
-In the project directory, you can run:
+## :rocket: Tecnologias
 
-### `npm start`
+As seguintes ferramentes foram utilizadas na construção desse projeto:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React
+- Typescript
+- react-router-dom
+- styled-components
+- react-icons
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
+    Made by <a href='https://www.linkedin.com/in/matheus-medeiros-da-silva-6172b5216/'>Matheus Medeiros da Silva</a> :man_technologist:
