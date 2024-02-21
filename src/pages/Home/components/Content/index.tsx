@@ -28,6 +28,7 @@ const Content: React.FC<{
   return (
     <Wrapper>
       <InteractiveButton
+        isInitialPage={!showProperties}
         onClick={() => {
           setShowProperties((prevState) => {
             if (!!prevState) {

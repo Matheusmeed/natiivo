@@ -49,8 +49,8 @@ export const StartDiv = styled.div<{ isAtHome: boolean }>`
   }
 
   @media (max-width: 420px) {
-    align-items: flex-end;
-    margin-right: 40px;
+    align-items: ${({ isAtHome }) => (isAtHome ? 'flex-end' : 'center')};
+    margin-right: ${({ isAtHome }) => (isAtHome ? '40px' : '0')};
     button {
       bottom: 20px;
     }

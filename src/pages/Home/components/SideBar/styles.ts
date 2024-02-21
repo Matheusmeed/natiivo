@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ isInitialPage: boolean }>`
   position: relative;
   min-width: 90px;
   display: flex;
@@ -18,11 +18,11 @@ export const Wrapper = styled.div`
   background-clip: padding-box;
 
   @media (max-width: 480px) {
-    min-width: 60px;
+    min-width: 78px;
   }
 
   @media (max-width: 420px) {
-    min-width: 40px;
+    min-width: ${({ isInitialPage }) => (isInitialPage ? '78px' : '40px')};
   }
 `;
 
